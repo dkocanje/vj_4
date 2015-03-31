@@ -113,6 +113,7 @@
             this.lstRezultati.Name = "lstRezultati";
             this.lstRezultati.Size = new System.Drawing.Size(120, 95);
             this.lstRezultati.TabIndex = 7;
+            this.lstRezultati.DoubleClick += new System.EventHandler(this.lstRezultati_DoubleClick);
             // 
             // btnIzracunaj
             // 

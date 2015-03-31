@@ -40,7 +40,23 @@ namespace zadatak_vj4
 
         private void btnOcisti_Click(object sender, EventArgs e)
         {
+            txtPolumjer.Text = "0,00";
+            txtPovrsina.Text = "0,00";
+            txtOpseg.Text = "0,00";
 
+            lstRezultati.Items.Clear();
+        }
+
+        private void lstRezultati_DoubleClick(object sender, EventArgs e)
+        {
+            float polumjer = 0;
+            float.TryParse(lstRezultati.SelectedItem.ToString(), out polumjer);
+
+            txtPolumjer.Text = polumjer.ToString();
+
+            button1_Click(null, null);
+
+           
         }
     }
 }
