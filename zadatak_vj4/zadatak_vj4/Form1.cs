@@ -19,6 +19,27 @@ namespace zadatak_vj4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            float polumjer = 0, povrsina = 0, opseg = 0;
+
+            float.TryParse(txtPolumjer.Text, out polumjer);
+
+            if (polumjer < 0) polumjer = 0;
+
+            povrsina = polumjer * polumjer * (float)Math.PI;
+            opseg = 2 * polumjer * (float)Math.PI;
+
+            txtPolumjer.Text = polumjer.ToString();
+            txtPovrsina.Text = Math.Round(povrsina, 2).ToString();
+            txtOpseg.Text = Math.Round(opseg, 2).ToString();
+
+            if (chkSpremi.Checked == true)
+            {
+                lstRezultati.Items.Add(polumjer);
+            }
+        }
+
+        private void btnOcisti_Click(object sender, EventArgs e)
+        {
 
         }
     }

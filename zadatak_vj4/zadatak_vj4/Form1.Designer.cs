@@ -132,6 +132,7 @@
             this.btnOcisti.TabIndex = 9;
             this.btnOcisti.Text = "Ocisti";
             this.btnOcisti.UseVisualStyleBackColor = true;
+            this.btnOcisti.Click += new System.EventHandler(this.btnOcisti_Click);
             // 
             // FrmGlavna
             // 
